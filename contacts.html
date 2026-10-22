@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Контактная информация учебного магазина СВЕТ и ссылка на форму заявки."
+    />
+    <title>Контакты | СВЕТ</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="visually-hidden-focusable skip-link" href="#main"
+      >Перейти к содержимому</a
+    >
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-md" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand site-header__logo" href="index.html">СВЕТ</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto gap-md-2 py-3 py-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Товары</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="order.html">Заявка</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="contacts.html"
+                  aria-current="page"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container" id="main" tabindex="-1">
+      <h1 class="page-title">Контакты</h1>
+      <p class="page-description">Контактная информация магазина.</p>
+      <div class="row g-4 contacts">
+        <div class="col-12 col-md-6">
+          <section
+            class="contacts__info h-100"
+            aria-labelledby="contacts-info-title"
+          >
+            <h2 id="contacts-info-title">Связаться с нами</h2>
+            <address>
+              <p>
+                <strong>E-mail:</strong>
+                <br />
+                <a href="mailto:hello@svet.example">hello@svet.example</a>
+              </p>
+              <p>
+                <strong>Телефон:</strong>
+                <br />
+                +7 (000) 000-00-00
+              </p>
+            </address>
+            <p class="contacts__note">
+              Контакты приведены для учебного примера.
+            </p>
+          </section>
+        </div>
+        <section class="col-12 col-md-6" aria-labelledby="feedback-title">
+          <h2 id="feedback-title">Обратная связь</h2>
+          <p>Оставьте вопрос о товаре в форме заявки.</p>
+          <a class="btn btn-primary" href="order.html">Открыть форму</a>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-wrap justify-content-between gap-3">
+        <p class="mb-0 small text-body-secondary">2026 СВЕТ — учебный проект</p>
+        <nav
+          class="d-flex flex-wrap gap-3 small"
+          aria-label="Разделы главной страницы"
+        >
+          <a href="index.html#advantages">Преимущества</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+    <noscript
+      ><div class="container alert alert-warning my-3">
+        Для мобильного меню, фильтров и модального окна включите JavaScript.
+        Страницы доступны по обычным ссылкам; форма без JavaScript не отправляет
+        данные.
+      </div></noscript
+    >
+  </body>
+</html>

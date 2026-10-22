@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Форма заявки на светильник: имя, e-mail, телефон, модель и комментарий."
+    />
+    <title>Форма заявки | СВЕТ</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="visually-hidden-focusable skip-link" href="#main"
+      >Перейти к содержимому</a
+    >
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-md" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand site-header__logo" href="index.html">СВЕТ</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto gap-md-2 py-3 py-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Товары</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="order.html" aria-current="page"
+                  >Заявка</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container" id="main" tabindex="-1">
+      <h1 class="page-title">Оформление заявки</h1>
+      <p class="page-description">Обязательные поля отмечены звёздочкой.</p>
+      <div class="row g-4">
+        <div class="col-12 col-lg-8">
+          <form
+            class="order-form"
+            id="order-form"
+            method="dialog"
+            aria-describedby="demo-note"
+          >
+            <p class="alert alert-secondary" id="demo-note">
+              Учебная форма без отправки заявки. Используйте вымышленные данные.
+            </p>
+            <div
+              class="alert alert-success"
+              id="order-success"
+              role="status"
+              tabindex="-1"
+              hidden
+            >
+              <h2 class="h4">Учебная заявка проверена</h2>
+              <p id="order-success-text"></p>
+              <p class="mb-0">Реальной отправки и покупки не было.</p>
+            </div>
+            <div class="order-form__field">
+              <label class="form-label order-form__label" for="customer-name"
+                >Имя *</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                id="customer-name"
+                name="name"
+                required
+                minlength="2"
+                maxlength="80"
+                autocomplete="name"
+              />
+            </div>
+            <div class="order-form__field">
+              <label class="form-label order-form__label" for="customer-email"
+                >E-mail *</label
+              >
+              <input
+                class="form-control"
+                type="email"
+                id="customer-email"
+                name="email"
+                required
+                maxlength="120"
+                autocomplete="email"
+              />
+            </div>
+            <div class="order-form__field">
+              <label class="form-label order-form__label" for="customer-phone"
+                >Телефон *</label
+              >
+              <div class="input-group">
+                <span class="input-group-text" id="phone-prefix">+7</span
+                ><input
+                  class="form-control"
+                  type="tel"
+                  id="customer-phone"
+                  name="phone"
+                  required
+                  inputmode="tel"
+                  autocomplete="tel-national"
+                  maxlength="20"
+                  placeholder="999 123-45-67"
+                  aria-describedby="phone-prefix phone-help"
+                />
+              </div>
+              <div class="form-text" id="phone-help">
+                10 цифр после +7; пробелы, скобки и дефисы допустимы.
+              </div>
+            </div>
+            <div class="order-form__field">
+              <label class="form-label order-form__label" for="product"
+                >Товар *</label
+              >
+              <select class="form-select" id="product" name="product" required>
+                <option value="">Выберите модель</option>
+                <option value="dome">Купол</option>
+                <option value="line">Линия</option>
+                <option value="point">Точка</option>
+              </select>
+            </div>
+            <div class="order-form__field">
+              <label class="form-label" for="quantity">Количество *</label
+              ><input
+                class="form-control"
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="10"
+                step="1"
+                required
+                value="1"
+              />
+            </div>
+            <div class="order-form__field">
+              <label class="form-label order-form__label" for="comment"
+                >Комментарий</label
+              >
+              <textarea
+                class="form-control"
+                id="comment"
+                name="comment"
+                rows="4"
+                maxlength="1000"
+              ></textarea>
+            </div>
+            <div class="form-check mb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="consent"
+                name="consent"
+                value="yes"
+                required
+              />
+              <label class="form-check-label" for="consent"
+                >Согласен на обработку данных *</label
+              >
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-primary" type="submit">
+                Отправить заявку</button
+              ><button class="btn btn-outline-secondary" type="reset">
+                Очистить форму
+              </button>
+            </div>
+          </form>
+        </div>
+        <aside class="col-12 col-lg-4" aria-labelledby="summary-title">
+          <div class="order-summary">
+            <h2 class="h4" id="summary-title">Ваш выбор</h2>
+            <img
+              id="summary-image"
+              class="img-fluid rounded mb-3"
+              src="images/dome.webp"
+              width="900"
+              height="900"
+              alt="Светильник Купол"
+              hidden
+            />
+            <p id="summary-name" class="h5">Светильник ещё не выбран</p>
+            <p id="summary-quantity" class="small text-body-secondary">
+              Выберите модель в форме.
+            </p>
+            <div class="d-flex justify-content-between border-top pt-3 gap-3">
+              <span>Итого</span
+              ><strong id="summary-total" aria-live="polite">—</strong>
+            </div>
+            <p class="small text-body-secondary mt-3 mb-0">
+              Товары и цены демонстрационные. Данные формы не сохраняются и не
+              отправляются.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-wrap justify-content-between gap-3">
+        <p class="mb-0 small text-body-secondary">2026 СВЕТ — учебный проект</p>
+        <nav
+          class="d-flex flex-wrap gap-3 small"
+          aria-label="Разделы главной страницы"
+        >
+          <a href="index.html#advantages">Преимущества</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+    <noscript
+      ><div class="container alert alert-warning my-3">
+        Для мобильного меню, фильтров и модального окна включите JavaScript.
+        Страницы доступны по обычным ссылкам; форма без JavaScript не отправляет
+        данные.
+      </div></noscript
+    >
+  </body>
+</html>

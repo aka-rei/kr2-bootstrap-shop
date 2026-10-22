@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Описание, цены и таблица характеристик трёх настольных светильников."
+    />
+    <title>Описание товаров | СВЕТ</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="visually-hidden-focusable skip-link" href="#main"
+      >Перейти к содержимому</a
+    >
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-md" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand site-header__logo" href="index.html">СВЕТ</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto gap-md-2 py-3 py-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="product.html"
+                  aria-current="page"
+                  >Товары</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="order.html">Заявка</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container" id="main" tabindex="-1">
+      <h1 class="page-title">Светильники</h1>
+      <article
+        class="product row g-4 align-items-center"
+        id="dome"
+        aria-labelledby="dome-title"
+      >
+        <div class="col-12 col-md-6">
+          <img
+            class="product__image"
+            src="images/dome.webp"
+            alt="Зелёная настольная лампа"
+            width="900"
+            height="900"
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <h2 id="dome-title">Купол</h2>
+          <p class="product__description">
+            Лампа с широким абажуром и тёплым светом для стола или тумбы.
+          </p>
+          <p class="product__price">8 900 ₽</p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#order-modal"
+            data-product="dome"
+          >
+            Оставить заявку
+          </button>
+        </div>
+      </article>
+      <article
+        class="product row g-4 align-items-center"
+        id="line"
+        aria-labelledby="line-title"
+      >
+        <div class="col-12 col-md-6">
+          <img
+            class="product__image"
+            src="images/line.webp"
+            alt="Белая лампа с регулируемым плечом"
+            width="900"
+            height="900"
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <h2 id="line-title">
+            Линия
+            <span class="badge text-bg-success fs-6 align-middle">Новинка</span>
+          </h2>
+          <p class="product__description">
+            Лампа с регулируемым плечом для рабочего стола.
+          </p>
+          <p class="product__price">6 400 ₽</p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#order-modal"
+            data-product="line"
+          >
+            Оставить заявку
+          </button>
+        </div>
+      </article>
+      <article
+        class="product row g-4 align-items-center"
+        id="point"
+        aria-labelledby="point-title"
+      >
+        <div class="col-12 col-md-6">
+          <img
+            class="product__image"
+            src="images/point.webp"
+            alt="Графитовая настольная лампа"
+            width="900"
+            height="900"
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <h2 id="point-title">Точка</h2>
+          <p class="product__description">
+            Компактная лампа с аккумулятором для небольшого стола.
+          </p>
+          <p class="product__price">4 700 ₽</p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#order-modal"
+            data-product="point"
+          >
+            Оставить заявку
+          </button>
+        </div>
+      </article>
+      <section
+        class="section table-responsive"
+        id="specifications"
+        tabindex="0"
+        aria-label="Характеристики светильников"
+      >
+        <table class="table table-striped spec-table">
+          <caption>
+            Характеристики
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Купол</th>
+              <th scope="col">Линия</th>
+              <th scope="col">Точка</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Высота</th>
+              <td>38 см</td>
+              <td>45 см</td>
+              <td>28 см</td>
+            </tr>
+            <tr>
+              <th scope="row">Мощность</th>
+              <td>8 Вт</td>
+              <td>10 Вт</td>
+              <td>4 Вт</td>
+            </tr>
+            <tr>
+              <th scope="row">Питание</th>
+              <td>От сети</td>
+              <td>От сети</td>
+              <td>Аккумулятор</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-wrap justify-content-between gap-3">
+        <p class="mb-0 small text-body-secondary">2026 СВЕТ — учебный проект</p>
+        <nav
+          class="d-flex flex-wrap gap-3 small"
+          aria-label="Разделы главной страницы"
+        >
+          <a href="index.html#advantages">Преимущества</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+    <div
+      class="modal fade"
+      id="order-modal"
+      tabindex="-1"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-4" id="modal-title">
+              Заявка на светильник
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Закрыть"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="modal-product" class="fw-semibold">Купол — 8 900 ₽</p>
+            <p class="mb-0">
+              В форме выберите модель и укажите контактные данные.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a
+              class="btn btn-primary"
+              id="modal-order-link"
+              href="order.html?product=dome"
+              >Перейти к форме</a
+            ><button
+              class="btn btn-outline-secondary"
+              type="button"
+              data-bs-dismiss="modal"
+            >
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <noscript
+      ><div class="container alert alert-warning my-3">
+        Для мобильного меню, фильтров и модального окна включите JavaScript.
+        Страницы доступны по обычным ссылкам; форма без JavaScript не отправляет
+        данные.
+      </div></noscript
+    >
+  </body>
+</html>

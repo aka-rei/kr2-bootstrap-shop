@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Каталог светильников Купол, Линия и Точка. Категории, фильтры и карточки на Bootstrap."
+    />
+    <title>Каталог | СВЕТ</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="visually-hidden-focusable skip-link" href="#main"
+      >Перейти к содержимому</a
+    >
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-md" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand site-header__logo" href="index.html">СВЕТ</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-navigation"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto gap-md-2 py-3 py-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="catalog.html"
+                  aria-current="page"
+                  >Каталог</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Товары</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="order.html">Заявка</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container" id="main" tabindex="-1">
+      <h1 class="page-title">Каталог</h1>
+      <p class="page-description">Три модели настольных светильников.</p>
+      <div class="catalog row g-4">
+        <aside class="col-12 col-lg-3" aria-labelledby="filter-title">
+          <form
+            class="filter"
+            id="catalog-filters"
+            role="search"
+            aria-label="Фильтры каталога"
+          >
+            <h2 class="h4" id="filter-title">Категории</h2>
+            <nav class="filter__links" aria-label="Категории каталога">
+              <a href="#work">Для работы</a><a href="#home">Для дома</a>
+            </nav>
+            <label class="form-label" for="search">Найти светильник</label
+            ><input
+              class="form-control mb-3"
+              id="search"
+              name="search"
+              type="search"
+              maxlength="80"
+              placeholder="Название"
+            />
+            <label class="form-label" for="category">Назначение</label
+            ><select class="form-select mb-3" id="category" name="category">
+              <option value="all">Все модели</option>
+              <option value="work">Для работы</option>
+              <option value="home">Для дома</option>
+            </select>
+            <fieldset class="mb-3">
+              <legend class="h6">Питание</legend>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="mains"
+                  name="power"
+                  value="mains"
+                /><label class="form-check-label" for="mains">От сети</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="battery"
+                  name="power"
+                  value="battery"
+                /><label class="form-check-label" for="battery"
+                  >Аккумулятор</label
+                >
+              </div>
+            </fieldset>
+            <label class="form-label" for="max-price">Цена до</label>
+            <div class="input-group mb-3">
+              <input
+                class="form-control"
+                type="number"
+                id="max-price"
+                name="maxPrice"
+                min="0"
+                max="1000000"
+                step="1"
+                placeholder="Любая"
+              /><span class="input-group-text">₽</span>
+            </div>
+            <label class="form-label" for="sort">Порядок в категории</label
+            ><select class="form-select mb-3" id="sort" name="sort">
+              <option value="default">По умолчанию</option>
+              <option value="price-asc">Сначала дешевле</option>
+              <option value="price-desc">Сначала дороже</option>
+              <option value="name">По названию</option>
+            </select>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-primary" type="submit">Применить</button
+              ><button class="btn btn-outline-secondary" type="reset">
+                Сбросить
+              </button>
+            </div>
+            <p
+              class="small text-body-secondary mt-3 mb-0"
+              id="catalog-count"
+              role="status"
+              aria-live="polite"
+            >
+              Найдено моделей: 3
+            </p>
+          </form>
+        </aside>
+        <div class="catalog__products col-12 col-lg-9" id="catalog-products">
+          <section
+            class="catalog__group"
+            id="work"
+            aria-labelledby="work-title"
+          >
+            <h2 id="work-title">Для работы</h2>
+            <div class="row g-4 product-grid">
+              <div
+                class="col-12 col-md-6 product-column"
+                data-id="line"
+                data-name="Линия"
+                data-category="work"
+                data-price="6400"
+                data-power="mains"
+              >
+                <article class="card product-card h-100">
+                  <img
+                    class="card-img-top product-card__image"
+                    src="images/line.webp"
+                    alt="Белая лампа с регулируемым плечом"
+                    width="900"
+                    height="900"
+                  />
+                  <span class="badge text-bg-light product-card__badge"
+                    >Новинка</span
+                  >
+                  <div class="card-body product-card__body d-flex flex-column">
+                    <h3 class="card-title product-card__title">Линия</h3>
+                    <p class="product-card__description">
+                      Лампа с регулируемым плечом для рабочего стола.
+                    </p>
+                    <p class="product-card__price">6 400 ₽</p>
+                    <a
+                      class="btn btn-primary mt-auto align-self-start"
+                      href="product.html#line"
+                      aria-label="Подробнее о лампе Линия"
+                    >
+                      Подробнее
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <section
+            class="catalog__group"
+            id="home"
+            aria-labelledby="home-title"
+          >
+            <h2 id="home-title">Для дома</h2>
+            <div class="row g-4 product-grid">
+              <div
+                class="col-12 col-md-6 product-column"
+                data-id="dome"
+                data-name="Купол"
+                data-category="home"
+                data-price="8900"
+                data-power="mains"
+              >
+                <article class="card product-card h-100">
+                  <img
+                    class="card-img-top product-card__image"
+                    src="images/dome.webp"
+                    alt="Зелёная настольная лампа"
+                    width="900"
+                    height="900"
+                  />
+                  <div class="card-body product-card__body d-flex flex-column">
+                    <h3 class="card-title product-card__title">Купол</h3>
+                    <p class="product-card__description">
+                      Лампа с широким абажуром и тёплым светом.
+                    </p>
+                    <p class="product-card__price">8 900 ₽</p>
+                    <a
+                      class="btn btn-primary mt-auto align-self-start"
+                      href="product.html#dome"
+                      aria-label="Подробнее о лампе Купол"
+                    >
+                      Подробнее
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="col-12 col-md-6 product-column"
+                data-id="point"
+                data-name="Точка"
+                data-category="home"
+                data-price="4700"
+                data-power="battery"
+              >
+                <article class="card product-card h-100">
+                  <img
+                    class="card-img-top product-card__image"
+                    src="images/point.webp"
+                    alt="Графитовая настольная лампа"
+                    width="900"
+                    height="900"
+                  />
+                  <div class="card-body product-card__body d-flex flex-column">
+                    <h3 class="card-title product-card__title">Точка</h3>
+                    <p class="product-card__description">
+                      Компактная лампа с аккумулятором.
+                    </p>
+                    <p class="product-card__price">4 700 ₽</p>
+                    <a
+                      class="btn btn-primary mt-auto align-self-start"
+                      href="product.html#point"
+                      aria-label="Подробнее о лампе Точка"
+                    >
+                      Подробнее
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <div
+            class="alert alert-secondary"
+            id="catalog-empty"
+            role="status"
+            hidden
+          >
+            <h2 class="h4">Светильники не найдены</h2>
+            <p>Измените условия поиска или сбросьте фильтры.</p>
+            <button
+              class="btn btn-outline-primary"
+              id="reset-empty"
+              type="button"
+            >
+              Сбросить фильтры
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-wrap justify-content-between gap-3">
+        <p class="mb-0 small text-body-secondary">2026 СВЕТ — учебный проект</p>
+        <nav
+          class="d-flex flex-wrap gap-3 small"
+          aria-label="Разделы главной страницы"
+        >
+          <a href="index.html#advantages">Преимущества</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#contacts">Контакты</a>
+        </nav>
+      </div>
+    </footer>
+    <noscript
+      ><div class="container alert alert-warning my-3">
+        Для мобильного меню, фильтров и модального окна включите JavaScript.
+        Страницы доступны по обычным ссылкам; форма без JavaScript не отправляет
+        данные.
+      </div></noscript
+    >
+  </body>
+</html>
