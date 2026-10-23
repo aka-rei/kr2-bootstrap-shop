@@ -27,3 +27,10 @@ HTML5, CSS3, JavaScript, Bootstrap 5.3.8. Bootstrap подключён лока�
 
 Сайт открывается через `index.html`, без установки, сборки и интернета.
 Форма учебная: данные не сохраняются и не отправляются.
+
+## GitHub Pages
+
+Сайт: [aka-rei.github.io/kr2-bootstrap-shop](https://aka-rei.github.io/kr2-bootstrap-shop/).
+
+Публикация настроена из корня ветки `main`: **Settings → Pages → Deploy from a branch → main → / (root)**.
+После отправки изменений в `main` сайт обновляется автоматически. Файл `.nojekyll` отключает обработку Jekyll.
